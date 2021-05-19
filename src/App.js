@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import Login from './Components/Login/Login';
 import Player from './Components/Player/Player';
 import './App.css';
@@ -10,7 +10,7 @@ const spotify = new SpotifyWebApi();
 
 function App() {
 
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ token }, dispatch] = useDataLayerValue();
 
    
   useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
           discover_weekly: response,
         })
       });
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 
 

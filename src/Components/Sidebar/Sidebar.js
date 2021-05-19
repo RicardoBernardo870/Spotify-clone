@@ -8,7 +8,7 @@ import { useDataLayerValue } from '../../DataLayer'
 
 
 export default function Sidebar() {
-    const [{playlists}, dispatch] = useDataLayerValue();
+    const [{playlists}] = useDataLayerValue();
     return (
         <div className='sidebar'>
             <img className='sidebar__logo' src='https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg' alt='logo'/>
