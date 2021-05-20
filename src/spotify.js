@@ -1,7 +1,7 @@
 //https://developer.spotify.com/documentation/web-playback-sdk/quick-start/#
 
 export const authEndpoint = 'https://accounts.spotify.com/authorize';
- const redirectUri = 'https://spotifycloning.netlify.app/';
+ const redirectUri = 'http://localhost:3000/';
  const clientId = 'e3096887b4d9480384d8d688870b57a5';
 
  const scopes = [
@@ -10,7 +10,6 @@ export const authEndpoint = 'https://accounts.spotify.com/authorize';
      "user-read-playback-state",
      "user-top-read",
      "user-modify-playback-state",
-     "playlist-read-private"
  ];
 
  export const getTokenFromUrl = () => {

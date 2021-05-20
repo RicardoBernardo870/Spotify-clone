@@ -12,14 +12,12 @@ function App() {
 
   const [{ token, playlists }, dispatch] = useDataLayerValue();
 
-
    
   useEffect(() => {
     const hash = getTokenFromUrl();
     
     window.location.hash = '';
     const _token = hash.access_token;
-    
     
     if (_token) {
       dispatch({
@@ -42,7 +40,6 @@ function App() {
           type:'SET_PLAYLISTS',
           playlists: playlists,
         })
-        
       });
 
       spotify.getPlaylist(playlists.items[0].id).then(response => {
