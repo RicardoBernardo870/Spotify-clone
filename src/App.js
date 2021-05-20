@@ -10,7 +10,8 @@ const spotify = new SpotifyWebApi();
 
 function App() {
 
-  const [{ token }, dispatch] = useDataLayerValue();
+  const [{ token, playlists }, dispatch] = useDataLayerValue();
+
 
    
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
     
     window.location.hash = '';
     const _token = hash.access_token;
+    
     
     if (_token) {
       dispatch({
@@ -40,9 +42,10 @@ function App() {
           type:'SET_PLAYLISTS',
           playlists: playlists,
         })
+        
       });
 
-      spotify.getPlaylist('37i9dQZEVXcW1bKAQdvC43').then(response => {
+      spotify.getPlaylist(playlists.items[0].id).then(response => {
         dispatch({
           type:'SET_DISCOVER_WEEKLY',
           discover_weekly: response,
@@ -50,7 +53,7 @@ function App() {
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
-
+console.log(playlists.items[0].id)
 
   return (
     <div className="App">

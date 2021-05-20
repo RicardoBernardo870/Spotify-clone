@@ -10,6 +10,7 @@ export const authEndpoint = 'https://accounts.spotify.com/authorize';
      "user-read-playback-state",
      "user-top-read",
      "user-modify-playback-state",
+     "playlist-read-private"
  ];
 
  export const getTokenFromUrl = () => {
