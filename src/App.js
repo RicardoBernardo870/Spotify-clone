@@ -53,7 +53,7 @@ function App() {
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
-console.log(playlists.items[0].id)
+
 
   return (
     <div className="App">
