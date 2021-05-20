@@ -20,9 +20,14 @@ export default function Sidebar() {
             <br />
             <strong className='sidebar__title'>PLAYLISTS</strong>
             <hr />
-            {playlists?.items?.map(playlist => (
+            
+            <ul>
+             <li>{playlists?.items?.map(playlist => (
                 <SidebarOption title={playlist.name} key={playlist.id} />
             ))}
+            </li>
+            </ul>
+            
 
             
         </div>

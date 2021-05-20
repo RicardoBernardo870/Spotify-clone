@@ -6,7 +6,9 @@ import './Body.css'
 import SongRow from '../SongRow/SongRow'
 
 function Body({ spotify }) {
-    const [{discover_weekly}] = useDataLayerValue();
+    const [{ discover_weekly }] = useDataLayerValue();
+ 
+    
     return (
         <div className='Body'>
             <Header spotify={spotify} />
@@ -14,7 +16,7 @@ function Body({ spotify }) {
                 <img src={discover_weekly?.images[0].url} alt=''/>
                 <div className='body__infoText'>
                 <strong>PLAYLIST</strong>
-                <h2>{discover_weekly.name}</h2>
+                <h2>{discover_weekly?.name}</h2>
                 <p>{discover_weekly?.description}</p>
                 </div>
             </div>

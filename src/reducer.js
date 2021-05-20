@@ -23,7 +23,8 @@ switch (action.type) {
     case 'SET_PLAYLISTS':
         return {
             ...state,
-            playlists: action.playlists
+            playlists: action.playlists,
+            items: action.playlists.items[0],
         }
     case 'SET_DISCOVER_WEEKLY':
         return {
